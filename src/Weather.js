@@ -14,7 +14,7 @@ export default function Weather() {
   }
 
   function showTemperature(response) {
-    setStatement(`Temperature: ${Math.round(response.data.main.temp)}`);
+    setStatement(`Temperature: ${Math.round(response.data.main.temp)}°C`);
     setDescriptionStatement(
       `Description: ${response.data.weather[0].description}`
     );
@@ -40,7 +40,6 @@ export default function Weather() {
         <li>{descriptionStatement}</li>
         <li>{statementHumidity}</li>
         <li>{statementWindSpeed}</li>
-        
       </ul>
     </form>
   );
