@@ -7,7 +7,7 @@ export default function Weather() {
   let [descriptionStatement, setDescriptionStatement] = useState(null);
   let [statementHumidity, setStatementHumidity] = useState(null);
   let [statementWindSpeed, setStatementWindspeed] = useState(null);
-  let [icon, setIcon] = useState(null);
+
 
   function updateCity(event) {
     setCity(event.target.value);
@@ -22,16 +22,12 @@ export default function Weather() {
       `Humidity: ${Math.round(response.data.main.humidity)}%`
     );
     setStatementWindspeed(`Windspeed: ${response.data.wind.speed}km/h`);
-    setIcon(
-      <img
-        src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`}
-      />
-    );
+    
   }
 
   function Searching(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bc2204f2285bd1d52f09483093f391ff&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bc2204f2285bd1d52f09483093f391ff&units=metric`
     axios.get(url).then(showTemperature);
   }
 
