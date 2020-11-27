@@ -40,7 +40,7 @@ export default function Weather() {
         <li>{descriptionStatement}</li>
         <li>{statementHumidity}</li>
         <li>{statementWindSpeed}</li>
-        <li>{icon}</li>
+        
       </ul>
     </form>
   );
