@@ -12,6 +12,7 @@
   border-width: thin;
   margin: 20px 400px;
   padding: 20px;
+  background: #61dafb;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -51,4 +52,8 @@
 
 ul {
   list-style: none;
+}
+
+.Credit {
+  text-align: center;
 }
